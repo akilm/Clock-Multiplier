@@ -83,3 +83,9 @@ Follow the following steps to use the spice netlist to view your waveforms:
 option which opens a waveform window along with the waveform of the node mentioned in the previous step.
 
 If any wrong label is entered, a dialogue box opens containing the list of all nodes and labels available.
+
+## Contact Information
+- AKIL M, B.tech Electrical and Electronics Engineering, NIT-Tiruchirappalli akilmv555@gmail.com
+- KUNAL GHOSH, Director, VSD Corp. Pvt. Ltd. kunalpghosh@gmail.com
+- PHILIPP GÜHRING, Software Architect at LibreSilicon Association pg@futureware.at
+- Dr. GAURAV TRIVEDI, Co-Principal Investigator, EICT Academy, IIT Guwahati trivedi@iitg.ac.in
