@@ -1,0 +1,153 @@
+* C:\Users\hi\Desktop\Clock-Multiplier\Simulation\Clock-Multiplier.asc
+V1 VDD 0 1.8
+V2 CLK1 0 PULSE(0 1.8 0 0 0 2u 4u)
+M21 VDD QCLK1 N034 N029 TSMC180nmP
+M22 N034 QCLK2 0 N039 TSMC180nmN
+M23 N047 CLK2 N057 N052 TSMC180nmP
+M24 N057 CLK2 N067 N062 TSMC180nmN
+M25 N048 N057 N058 N053 TSMC180nmP
+M26 N058 N057 N068 N063 TSMC180nmN
+M27 N049 N058 N059 N054 TSMC180nmP
+M28 N059 N058 N069 N064 TSMC180nmN
+M29 N050 N059 N060 N055 TSMC180nmP
+M30 N060 N059 N070 N065 TSMC180nmN
+M31 N051 N060 CLK2 N056 TSMC180nmP
+M32 CLK2 N060 N071 N066 TSMC180nmN
+M33 VDD N040 N047 N042 TSMC180nmP
+M34 VDD N040 N048 N043 TSMC180nmP
+M35 VDD N040 N049 N044 TSMC180nmP
+M36 VDD N040 N050 N045 TSMC180nmP
+M37 VDD N040 N051 N046 TSMC180nmP
+M38 N068 Vcont 0 N073 TSMC180nmN
+M39 N069 Vcont 0 N074 TSMC180nmN
+M40 N070 Vcont 0 N075 TSMC180nmN
+M41 N071 Vcont 0 N076 TSMC180nmN
+M42 VDD N040 N040 N041 TSMC180nmP
+M43 N040 Vcont 0 N061 TSMC180nmN
+M44 N067 Vcont 0 N072 TSMC180nmN
+M1 VDD VDD P001 N001 TSMC180nmP
+M2 P001 CLK1 N011 N010 TSMC180nmP
+M3 N011 VDD 0 N016 TSMC180nmN
+M4 P002 CLK1 0 N017 TSMC180nmN
+M5 N005 N011 P002 N012 TSMC180nmN
+M6 VDD CLK1 N005 N002 TSMC180nmP
+M7 P003 N005 0 N018 TSMC180nmN
+M8 N009 CLK1 P003 N013 TSMC180nmN
+M9 VDD N005 N009 N003 TSMC180nmP
+M10 VDD ~Reset N009 N004 TSMC180nmP
+M11 VDD N009 QCLK1 N006 TSMC180nmP
+M12 QCLK1 N009 0 N015 TSMC180nmN
+M13 VDD VDD P004 N020 TSMC180nmP
+M14 P004 CLK2 N030 N027 TSMC180nmP
+M15 N030 VDD 0 N036 TSMC180nmN
+M16 P005 CLK2 0 N037 TSMC180nmN
+M17 N024 N030 P005 N031 TSMC180nmN
+M18 VDD CLK2 N024 N021 TSMC180nmP
+M19 P006 N024 0 N038 TSMC180nmN
+M20 N026 CLK2 P006 N032 TSMC180nmN
+M45 VDD N024 N026 N022 TSMC180nmP
+M46 VDD ~Reset N026 N023 TSMC180nmP
+M47 VDD N026 QCLK2 N025 TSMC180nmP
+M48 QCLK2 N026 0 N033 TSMC180nmN
+M49 VDD QCLK1 ~Reset N007 TSMC180nmP
+M50 VDD QCLK2 ~Reset N008 TSMC180nmP
+M51 ~Reset QCLK1 P007 N014 TSMC180nmN
+M52 P007 QCLK2 0 N019 TSMC180nmN
+R1 N035 N034 10000
+C1 N035 0 10n
+C2 N057 0 10p
+C3 N058 0 10p
+C4 N059 0 10p
+C5 N060 0 10p
+C6 CLK2 0 10p
+C7 N034 0 10n
+XU1 N035 N028 Vpos Vneg Vcont AD549
+V3 Vpos 0 5
+V4 Vneg 0 -5
+R2 N028 0 1k
+R3 Vcont N028 99k
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\hi\Documents\LTspiceXVII\lib\cmp\standard.mos
+.MODEL TSMC180nmN NMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
++XJ      = 1E-7           NCH     = 2.3549E17      VTH0    = 0.354505
++K1      = 0.5733393      K2      = 3.177172E-3    K3      = 27.3563303
++K3B     = -10            W0      = 2.341477E-5    NLX     = 1.906617E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 1.6751718      DVT1    = 0.4282625      DVT2    = 0.036004
++U0      = 327.3736992    UA      = -4.52726E-11   UB      = 4.46532E-19
++UC      = -4.74051E-11   VSAT    = 8.785346E4     A0      = 1.6897405
++AGS     = 0.2908676      B0      = -8.224961E-9   B1      = -1E-7
++KETA    = 0.021238       A1      = 8.00349E-4     A2      = 1
++RDSW    = 105            PRWG    = 0.5            PRWB    = -0.2
++WR      = 1              WINT    = 0              LINT    = 1.351737E-8
+*+XL      = -2E-8          XW      = -1E-8
++ DWG     = 1.610448E-9
++DWB     = -5.108595E-9   VOFF    = -0.0652968     NFACTOR = 2.4901845
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.0231564      ETAB    = -0.058499
++DSUB    = 0.9467118      PCLM    = 0.8512348      PDIBLC1 = 0.0929526
++PDIBLC2 = 0.01           PDIBLCB = -0.1           DROUT   = 0.5224026
++PSCBE1  = 7.979323E10    PSCBE2  = 1.522921E-9    PVAG    = 0.01
++DELTA   = 0.01           RSH     = 6.8            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 7.7E-10        CGSO    = 7.7E-10        CGBO    = 1E-12
++CJ      = 1.010083E-3    PB      = 0.7344298      MJ      = 0.3565066
++CJSW    = 2.441707E-10   PBSW    = 0.8005503      MJSW    = 0.1327842
++CJSWG   = 3.3E-10        PBSWG   = 0.8005503      MJSWG   = 0.1327842
++CF      = 0              PVTH0   = 1.307195E-3    PRDSW   = -5
++PK2     = -1.022757E-3   WKETA   = -4.466285E-4   LKETA   = -9.715157E-3
++PU0     = 12.2704847     PUA     = 4.421816E-11   PUB     = 0
++PVSAT   = 1.707461E3     PETA0   = 1E-4           PKETA   = 2.348777E-3     )
+.MODEL TSMC180nmP PMOS (                                LEVEL   = 7
++VERSION = 3.1            TNOM    = 27             TOX     = 4.1E-9
++XJ      = 1E-7           NCH     = 4.1589E17      VTH0    = -0.4120614
++K1      = 0.5590154      K2      = 0.0353896      K3      = 0
++K3B     = 7.3774572      W0      = 1E-6           NLX     = 1.103367E-7
++DVT0W   = 0              DVT1W   = 0              DVT2W   = 0
++DVT0    = 0.4301522      DVT1    = 0.2156888      DVT2    = 0.1
++U0      = 128.7704538    UA      = 1.908676E-9    UB      = 1.686179E-21
++UC      = -9.31329E-11   VSAT    = 1.658944E5     A0      = 1.6076505
++AGS     = 0.3740519      B0      = 1.711294E-6    B1      = 4.946873E-6
++KETA    = 0.0210951      A1      = 0.0244939      A2      = 1
++RDSW    = 127.0442882    PRWG    = 0.5            PRWB    = -0.5
++WR      = 1              WINT    = 5.428484E-10   LINT    = 2.468805E-8
+*+XL      = -2E-8          XW      = -1E-8
++DWG     = -2.453074E-8
++DWB     = 6.408778E-9    VOFF    = -0.0974174     NFACTOR = 1.9740447
++CIT     = 0              CDSC    = 2.4E-4         CDSCD   = 0
++CDSCB   = 0              ETA0    = 0.1847491      ETAB    = -0.2531172
++DSUB    = 1.5            PCLM    = 4.8842961      PDIBLC1 = 0.0156227
++PDIBLC2 = 0.1            PDIBLCB = -1E-3          DROUT   = 0
++PSCBE1  = 1.733878E9     PSCBE2  = 5.002842E-10   PVAG    = 15
++DELTA   = 0.01           RSH     = 7.7            MOBMOD  = 1
++PRT     = 0              UTE     = -1.5           KT1     = -0.11
++KT1L    = 0              KT2     = 0.022          UA1     = 4.31E-9
++UB1     = -7.61E-18      UC1     = -5.6E-11       AT      = 3.3E4
++WL      = 0              WLN     = 1              WW      = 0
++WWN     = 1              WWL     = 0              LL      = 0
++LLN     = 1              LW      = 0              LWN     = 1
++LWL     = 0              CAPMOD  = 2              XPART   = 0.5
++CGDO    = 7.11E-10       CGSO    = 7.11E-10       CGBO    = 1E-12
++CJ      = 1.179334E-3    PB      = 0.8545261      MJ      = 0.4117753
++CJSW    = 2.215877E-10   PBSW    = 0.6162997      MJSW    = 0.2678074
++CJSWG   = 4.22E-10       PBSWG   = 0.6162997      MJSWG   = 0.2678074
++CF      = 0              PVTH0   = 2.283319E-3    PRDSW   = 5.6431992
++PK2     = 2.813503E-3    WKETA   = 2.438158E-3    LKETA   = -0.0116078
++PU0     = -2.2514581     PUA     = -7.62392E-11   PUB     = 4.502298E-24
++PVSAT   = -50            PETA0   = 1E-4           PKETA   = -1.047892E-4    )
+.tran 0 1 0
+* Current Starved Ring Oscillator
+* Phase Frequency Detector (Dual D Type)
+* Charge Pump
+* Low Pass Filter and Amplifier
+.lib ADI1.lib
+.backanno
+.end
