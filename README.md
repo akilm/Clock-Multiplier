@@ -43,15 +43,18 @@ your pc. \n
  ``` File > Open > Select the .asc files ```. 
 3. Once you have opened the file. You can see the spice schematic.
 
-The schematic is divided into the following components : namely ```Phase Frequency detector```,``` Low-Pass Filter and Amplifier ``` and the ```Voltage Controlled Oscillator```. Working on the ```Frequency Divider``` Section on the feedback path, it will be updated soon along with the schematic file.
-###### Phase Frequency Detector
+The schematic is divided into the following components : namely ```Phase Frequency detector```,``` Charge Pump```, ```Low-Pass Filter``` ,```Amplifier ``` and ```Voltage Controlled Oscillator```. Working on the ```Frequency Divider``` Section on the feedback path, it will be updated soon along with the schematic file.
 
-###### Low-Pass Filter and Amplifier 
-
-###### Voltage Controlled Oscillator (Ring Type)
-
-
-### View Waveforms 
+#### Phase Frequency Detector
+![alt text](https://github.com/akilm/Clock-Multiplier/blob/master/Schematic%20and%20Waveform%20images/Phase%20Frequency%20Detector.JPG)
+<br /> Dual D type phase frequency detector is implemented with both the D inputs connected to Vdd. CLK1 forms the reference frequency and CLK2 is the output frequency. 
+#### Charge Pump, Low-Pass Filter and Amplifier 
+![alt text](https://github.com/akilm/Clock-Multiplier/blob/master/Schematic%20and%20Waveform%20images/ChargePump%20LpF%20and%20Amplifier.JPG)
+<br /> QCLK1(Up) and QCLK1(Down) signals are fed as inputs to the charge pump.The control voltage for the ring oscillator is obtained from the output of the amplifier stage.
+#### Voltage Controlled Oscillator (Ring Type)
+![alt text](https://github.com/akilm/Clock-Multiplier/blob/master/Schematic%20and%20Waveform%20images/Ring%20Oscillator.JPG)
+<br /> A 5-stage Current starved Ring Oscillator is implemented as show in the schematic.Vcont acts as the controlling voltage signal for the output frequency CLK2.
+#### View Waveforms 
 
 The following steps should be followed to view the waveforms:
 
@@ -63,8 +66,11 @@ waveform window and select Add Plot Pane. This will add an extra pane to view th
 You can add as many number of panes according to your requirement.
 4. If you feel like changing the color of the waveforms or background, ```Tools > Control Panel > Waveforms > Color Scheme.```
 
-###### Reference and Output Clock Frequency Waveforms
-
+#### Reference and Output Clock Frequency Waveforms
+![alt text](https://github.com/akilm/Clock-Multiplier/blob/master/Schematic%20and%20Waveform%20images/Clk%20waveforms.JPG)
+<br /> Input (CLK1) and Output (CLK2) Waveforms
+![alt text](https://github.com/akilm/Clock-Multiplier/blob/master/Schematic%20and%20Waveform%20images/VCO%20Control%20Voltage.JPG)
+<br /> Control Voltage for Ring Oscillator.
 ### Spice Netlist
 You can also view the spice netlist of your schematic. View > Spice Netlist.
 A text box that contains the spice netlist opens up.
