@@ -21,9 +21,9 @@ LTspice installation steps are described for all kinds of users: Windows, Mac an
 
 ### LINUX
 
-1. LTspice is not directly supported on LINUX distributions. 
-2. LINUX users must install WINE. Wine is a linux software that creates windows environment and allows you to run various windows programs. Download wine from Wine.
-3. Download LTspice setup for windows from DOWNLOAD .Click on ```Download for windows``` 
+1. LTspice is not directly supported on LINUX distributions. Wine is a linux software that creates windows environment and allows you to run various windows programs.
+2. Click here to install [WINE](https://wiki.winehq.org/Download).
+3. Download LTspice setup for windows from [LTSpice Download for Windows](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html).Click on ```Download for windows``` .
 4. Right click on the downloaded setup file and select the option ```Open With > Wine Windows Program Loader```
 5. Accept the license and follow basic installation steps.
 
@@ -32,6 +32,7 @@ LTspice installation steps are described for all kinds of users: Windows, Mac an
 The different features of LTspice are described briefly in [LTspice Getting Started Guide](https://www.analog.com/media/en/simulation-models/spice-models/LTspiceGettingStartedGuide.pdf?modelType=spice-models)
 ## Simulations
 The Steps to run the simulations and view the necessary waveforms are described briefly in this section.
+[TSMC180nm](https://user.eng.umd.edu/~newcomb/courses/spring2010/303/tsmc180nmcmos.lib) library is used for simulating the circuit. Need to Change the Library to Osu180nm.
 ### View Schematic 
 
 The following steps should be followed to view the schematic:
@@ -42,6 +43,7 @@ your pc. \n
  ``` File > Open > Select the .asc files ```. 
 3. Once you have opened the file. You can see the spice schematic.
 
+The schematic is divided into the following components : namely ```Phase Frequency detector```,``` Low-Pass Filter and Amplifier ``` and the ```Voltage Controlled Oscillator```. Working on the ```Frequency Divider``` Section on the feedback path, it will be updated soon along with the schematic file.
 ###### Phase Frequency Detector
 
 ###### Low-Pass Filter and Amplifier 
